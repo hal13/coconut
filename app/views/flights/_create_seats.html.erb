@@ -1,0 +1,18 @@
+<h2>New Seats</h2>
+
+<%= form_for [flight, seat] do |f| %>
+  <div>
+    <p><%= f.label "Name" %></p>
+    <p><%= f.text_field :name %></p>
+  </div>
+  
+  <div>
+    <p><%= f.label "Baggage" %></p>
+    <p><%= f.text_field :baggage %></p>
+  </div>
+  
+  <div>
+    <p><%= f.submit "Create" %></p>
+  </div>
+<% end %>
+

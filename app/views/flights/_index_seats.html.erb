@@ -1,0 +1,20 @@
+<h2>Listing Seats</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Baggage</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% seats.each do |seat| %>
+      <tr>
+	<td><%= seat.name %></td>
+	<td><%= seat.baggage %></td>
+	<td><%= link_to 'Delete', flight_seat_path(seat.flight_id, seat.id), method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
